@@ -7,9 +7,6 @@ public partial class MainWindow : Window
 public MainWindow()
 {
     InitializeComponent();
-    // Exemple d'attachement d'événement :
-    this.FindControl<Button>("BtnPage1").Click += GoToPage1_Click;
-    this.FindControl<Button>("BtnPage2").Click += GoToPage2_Click;
 }
 
 private async void GoToPage1_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
