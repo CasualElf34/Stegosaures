@@ -6,6 +6,11 @@ build_property.AvaloniaNameGeneratorFilterByPath = *
 build_property.AvaloniaNameGeneratorFilterByNamespace = *
 build_property.AvaloniaNameGeneratorViewFileNamingStrategy = NamespaceAndClassName
 build_property.AvaloniaNameGeneratorAttachDevTools = true
+build_property.MvvmToolkitEnableINotifyPropertyChangingSupport = true
+build_property._MvvmToolkitIsUsingWindowsRuntimePack = false
+build_property.CsWinRTComponent = 
+build_property.CsWinRTAotOptimizerEnabled = 
+build_property.CsWinRTAotWarningLevel = 
 build_property.TargetFramework = net10.0
 build_property.TargetFrameworkIdentifier = .NETCoreApp
 build_property.TargetFrameworkVersion = v10.0
@@ -29,8 +34,11 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 [C:/Users/maelg/Desktop/Court-26-27/C\#/Stegosaures/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/maelg/Desktop/Court-26-27/C\#/Stegosaures/page1.axaml]
+[C:/Users/maelg/Desktop/Court-26-27/C\#/Stegosaures/Views/DecodeView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/maelg/Desktop/Court-26-27/C\#/Stegosaures/page2.axaml]
+[C:/Users/maelg/Desktop/Court-26-27/C\#/Stegosaures/Views/EncodeView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/maelg/Desktop/Court-26-27/C\#/Stegosaures/Views/HistoryView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
