@@ -9,7 +9,9 @@ public partial class MainWindow : Window
     {
 
         Console.WriteLine("MainWindow instanciée");
+
         InitializeComponent();
+        WindowState = WindowState.Maximized;
         DataContext = ViewModels.ThemeManager.Instance;
 
         // Affiche EncodeView par défaut

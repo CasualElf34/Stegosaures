@@ -54,5 +54,18 @@
     "C:\\Users\\maelg\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.1.11\\sqlitepclraw.provider.e_sqlite3.2.1.11.nupkg.sha512",
     "C:\\Users\\maelg\\.nuget\\packages\\tmds.dbus.protocol\\0.21.2\\tmds.dbus.protocol.0.21.2.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "Le package 'Tmds.DBus.Protocol' 0.21.2 présente une vulnérabilité de gravité élevé(e) connue, https://github.com/advisories/GHSA-xrw6-gwf8-vvr9.",
+      "projectPath": "C:\\Users\\maelg\\Desktop\\Court-26-27\\C#\\Stegosaures\\SteganographyLSB.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\maelg\\Desktop\\Court-26-27\\C#\\Stegosaures\\SteganographyLSB.csproj",
+      "libraryId": "Tmds.DBus.Protocol",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    }
+  ]
 }
