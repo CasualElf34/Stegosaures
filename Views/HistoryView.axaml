@@ -1,0 +1,55 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:SteganographyLSB.ViewModels"
+             xmlns:conv="clr-namespace:SteganographyLSB.Converters"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600"
+             x:Class="SteganographyLSB.Views.HistoryView"
+             x:DataType="vm:HistoryViewModel">
+
+    <UserControl.Resources>
+        <conv:OpTypeToBrushConverter x:Key="OpTypeConverter"/>
+    </UserControl.Resources>
+
+    <Grid RowDefinitions="Auto, *, Auto" Margin="20">
+        <StackPanel Grid.Row="0" Spacing="10" Margin="0,0,0,20">
+            <TextBlock Text="Operation History" FontSize="28" FontWeight="Bold" Foreground="#FF9933"/>
+            <TextBlock Text="View your recent encoding and decoding logs." Opacity="0.7"/>
+        </StackPanel>
+
+        <Border Grid.Row="1" BorderBrush="#444" BorderThickness="1" CornerRadius="8" Background="#1E1E1E">
+            <ListBox ItemsSource="{Binding Operations}" Background="Transparent">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Border BorderBrush="#333" BorderThickness="0,0,0,1" Padding="15">
+                            <Grid ColumnDefinitions="Auto, *, Auto">
+                                <TextBlock Text="●" FontSize="24" Margin="0,0,15,0" VerticalAlignment="Center"
+                                          Foreground="{Binding OperationType, Converter={StaticResource OpTypeConverter}}"/>
+                                
+                                <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                                    <TextBlock Text="{Binding FileName}" FontSize="16" FontWeight="SemiBold"/>
+
+                                    <StackPanel Orientation="Horizontal" Spacing="15" Opacity="0.6">
+                                        <TextBlock Text="{Binding OperationType}"/>
+                                        <TextBlock Text="•"/>
+                                        <TextBlock Text="{Binding Timestamp, StringFormat='dd/MM/yyyy HH:mm'}"/>
+                                    </StackPanel>
+                                </StackPanel>
+
+                                <StackPanel Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right">
+                                    <TextBlock Text="{Binding MessageLength, StringFormat='{}{0} chars'}"
+                                               FontSize="14" FontWeight="Bold" Foreground="#3399FF"/>
+                                </StackPanel>
+
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Border>
+
+        <Button Grid.Row="2" Content="Clear History" Command="{Binding ClearHistoryCommand}"
+                HorizontalAlignment="Right" Margin="0,20,0,0" Foreground="#FF5555" />
+    </Grid>
+</UserControl>

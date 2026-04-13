@@ -1,0 +1,37 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:SteganographyLSB.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600"
+             x:Class="SteganographyLSB.Views.EncodeView"
+             x:DataType="vm:EncodeViewModel">
+
+    <ScrollViewer Margin="20">
+        <StackPanel Spacing="20">
+            <TextBlock Text="Encode a Message" FontSize="28" FontWeight="Bold" Foreground="#3399FF"/>
+            
+            <Border BorderBrush="#444" BorderThickness="1" CornerRadius="8" Padding="20" Background="#1E1E1E">
+                <StackPanel Spacing="15">
+                    <Button Content="Select Source Image" HorizontalAlignment="Stretch" 
+                            HorizontalContentAlignment="Center" Click="OnSelectImageClick"
+                            Background="#333" Height="40"/>
+                    
+                    <Border Height="200" Background="#111" CornerRadius="4" ClipToBounds="True">
+                        <Image Source="{Binding PreviewImage}" Stretch="Uniform" />
+                    </Border>
+                    
+                    <TextBlock Text="Secret Message:" FontWeight="SemiBold"/>
+                    <TextBox Text="{Binding Message}" AcceptsReturn="True" Height="100" 
+                             Watermark="Enter message to hide..." />
+                    
+                    <Button Content="Encode &amp; Save Image" Command="{Binding EncodeAndSaveCommand}"
+                            Background="#007ACC" Foreground="White" HorizontalAlignment="Stretch" 
+                            HorizontalContentAlignment="Center" Height="45" Click="OnSaveClick"/>
+                </StackPanel>
+            </Border>
+            
+            <TextBlock Text="{Binding Status}" FontStyle="Italic" HorizontalAlignment="Center"/>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

@@ -2,16 +2,22 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:SteganographyLSB"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        xmlns:views="clr-namespace:SteganographyLSB.Views"
+        mc:Ignorable="d" d:DesignWidth="900" d:DesignHeight="700"
         x:Class="SteganographyLSB.MainWindow"
-        Title="SteganographyLSB">
-    <TabControl>
-        <TabItem Header="Page 1">
-            <local:page1 />
-        </TabItem>
-        <TabItem Header="Page 2">
-            <local:page2 />
-        </TabItem>
-    </TabControl>
+        Title="Steganography LSB"
+        Background="#1E1E1E">
+
+    <Grid ColumnDefinitions="180,*" RowDefinitions="*">
+        <!-- Menu latéral -->
+        <StackPanel Background="#232323" Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+            <Button x:Name="EncodeBtn" Content="Encode" Margin="10,30,10,0" Height="40" Background="#353535" Foreground="White"/>
+            <Button x:Name="DecodeBtn" Content="Decode" Margin="10,10,10,0" Height="40" Background="#353535" Foreground="White"/>
+        </StackPanel>
+
+        <!-- Contenu central : vue dynamique -->
+        <Border Grid.Column="1" Margin="20" Background="#282828" CornerRadius="10">
+            <ContentControl x:Name="MainContent" />
+        </Border>
+    </Grid>
 </Window>
