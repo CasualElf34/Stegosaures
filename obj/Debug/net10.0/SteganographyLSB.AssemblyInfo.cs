@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SteganographyLSB")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e629b5bb9e88de1991a9792c470cc1e71747bfd5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bc96d36e602c71a0ca05ddc748c97a9c913246b2")]
 [assembly: System.Reflection.AssemblyProductAttribute("SteganographyLSB")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SteganographyLSB")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

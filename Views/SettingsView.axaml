@@ -1,0 +1,20 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:SteganographyLSB.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="400"
+             x:Class="SteganographyLSB.Views.SettingsView"
+             x:DataType="vm:ThemeManager">
+    <StackPanel Margin="30" Spacing="20">
+        <TextBlock Text="Paramètres" FontSize="28" FontWeight="Bold" Foreground="{Binding MainColor}"/>
+        <TextBlock Text="Thème principal :" FontWeight="SemiBold"/>
+        <ComboBox SelectedIndex="{Binding SelectedThemeIndex}" Width="200">
+            <ComboBoxItem Content="Vert (défaut)"/>
+            <ComboBoxItem Content="Bleu"/>
+            <ComboBoxItem Content="Orange"/>
+            <ComboBoxItem Content="Rouge"/>
+        </ComboBox>
+        <Button x:Name="ResetBtn" Content="Réinitialiser les paramètres" Width="220"/>
+    </StackPanel>
+</UserControl>

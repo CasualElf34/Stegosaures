@@ -1,18 +1,21 @@
 <Window xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:views="clr-namespace:SteganographyLSB.Views"
-        mc:Ignorable="d" d:DesignWidth="900" d:DesignHeight="700"
-        x:Class="SteganographyLSB.MainWindow"
-        Title="Steganography LSB"
-        Background="#1E1E1E">
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:views="clr-namespace:SteganographyLSB.Views"
+    xmlns:vm="clr-namespace:SteganographyLSB.ViewModels"
+    mc:Ignorable="d" d:DesignWidth="900" d:DesignHeight="700"
+    x:Class="SteganographyLSB.MainWindow"
+    x:DataType="vm:ThemeManager"
+    Title="Steganography LSB"
+    Background="#1E1E1E">
 
     <Grid ColumnDefinitions="180,*" RowDefinitions="*">
         <!-- Menu latéral -->
         <StackPanel Background="#232323" Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-            <Button x:Name="EncodeBtn" Content="Encode" Margin="10,30,10,0" Height="40" Background="#353535" Foreground="White"/>
-            <Button x:Name="DecodeBtn" Content="Decode" Margin="10,10,10,0" Height="40" Background="#353535" Foreground="White"/>
+            <Button x:Name="EncodeBtn" Content="Encode" Margin="10,30,10,0" Height="40" Background="#353535" Foreground="{Binding MainColor}"/>
+            <Button x:Name="DecodeBtn" Content="Decode" Margin="10,10,10,0" Height="40" Background="#353535" Foreground="{Binding MainColor}"/>
+            <Button x:Name="SettingsBtn" Content="Settings" Margin="10,10,10,0" Height="40" Background="#353535" Foreground="{Binding MainColor}"/>
         </StackPanel>
 
         <!-- Contenu central : vue dynamique -->

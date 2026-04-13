@@ -28,20 +28,36 @@ public partial class DecodeViewModel : ViewModelBase
     [ObservableProperty]
     private string _status = "Select an image to decode.";
 
+    [ObservableProperty]
+    private bool _isError = false;
+
     [RelayCommand]
     private async Task ExtractMessage()
     {
         if (SourceImage == null)
         {
-            Status = "Please select an image.";
+            Status = "Veuillez sélectionner une image.";
+            IsError = true;
             return;
         }
 
         try
         {
-            Status = "Decoding...";
+            Status = "Décodage en cours...";
+            IsError = false;
             DecodedMessage = _lsbService.Decode(SourceImage);
-            
+
+            if (string.IsNullOrWhiteSpace(DecodedMessage))
+            {
+                Status = "Aucun message n'a été trouvé.";
+                IsError = true;
+            }
+            else
+            {
+                Status = "Message extrait avec succès !";
+                IsError = false;
+            }
+
             // Save to History
             using (var db = new HistoryContext())
             {
@@ -53,12 +69,11 @@ public partial class DecodeViewModel : ViewModelBase
                 });
                 await db.SaveChangesAsync();
             }
-
-            Status = string.IsNullOrWhiteSpace(DecodedMessage) ? "No message found." : "Message extracted successfully!";
         }
         catch (Exception ex)
         {
-            Status = $"Error: {ex.Message}";
+            Status = "Erreur lors du décodage : " + ex.Message;
+            IsError = true;
         }
     }
 

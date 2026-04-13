@@ -3,14 +3,18 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="clr-namespace:SteganographyLSB.ViewModels"
+             xmlns:converters="clr-namespace:SteganographyLSB.Converters"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600"
              x:Class="SteganographyLSB.Views.DecodeView"
              x:DataType="vm:DecodeViewModel">
 
     <ScrollViewer Margin="20">
         <StackPanel Spacing="20">
+            <StackPanel.Resources>
+                <converters:BoolToBrushConverter x:Key="BoolToBrush" TrueBrush="Red" FalseBrush="#00CC99" />
+            </StackPanel.Resources>
             <TextBlock Text="Extract a Message" FontSize="28" FontWeight="Bold" Foreground="#00CC99"/>
-            
+
             <Border BorderBrush="#444" BorderThickness="1" CornerRadius="8" Padding="20" Background="#1E1E1E">
                 <StackPanel Spacing="15">
                     <Button Content="Select Encoded Image" HorizontalAlignment="Stretch" 
@@ -31,7 +35,8 @@
                 </StackPanel>
             </Border>
             
-            <TextBlock Text="{Binding Status}" FontStyle="Italic" HorizontalAlignment="Center"/>
+            <TextBlock Text="{Binding Status}" FontStyle="Italic" HorizontalAlignment="Center"
+                       Foreground="{Binding IsError, Converter={StaticResource BoolToBrush}}" />
         </StackPanel>
     </ScrollViewer>
 </UserControl>
