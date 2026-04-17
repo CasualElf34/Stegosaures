@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\maelg\\Desktop\\Court-26-27\\C#\\Stegosaures\\SteganographyLSB.csproj": {}
+    "C:\\Users\\padro\\Downloads\\Stegosaures\\SteganographyLSB.csproj": {}
   },
   "projects": {
-    "C:\\Users\\maelg\\Desktop\\Court-26-27\\C#\\Stegosaures\\SteganographyLSB.csproj": {
+    "C:\\Users\\padro\\Downloads\\Stegosaures\\SteganographyLSB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\maelg\\Desktop\\Court-26-27\\C#\\Stegosaures\\SteganographyLSB.csproj",
+        "projectUniqueName": "C:\\Users\\padro\\Downloads\\Stegosaures\\SteganographyLSB.csproj",
         "projectName": "SteganographyLSB",
-        "projectPath": "C:\\Users\\maelg\\Desktop\\Court-26-27\\C#\\Stegosaures\\SteganographyLSB.csproj",
-        "packagesPath": "C:\\Users\\maelg\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\maelg\\Desktop\\Court-26-27\\C#\\Stegosaures\\obj\\",
+        "projectPath": "C:\\Users\\padro\\Downloads\\Stegosaures\\SteganographyLSB.csproj",
+        "packagesPath": "C:\\Users\\padro\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\padro\\Downloads\\Stegosaures\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\maelg\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\padro\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -45,7 +40,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net10.0": {
@@ -96,7 +91,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
